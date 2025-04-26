@@ -1,0 +1,52 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;CSS Selectors&lt;/title&gt;
+    &lt;style&gt;
+        /* Universal Selector */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* Element Selector */
+        p{
+            color:blueviolet
+        }
+
+        /* Id Selector */
+       #secondPara{
+        color:chartreuse;
+       }
+
+       /* Class Selector */
+        .redElement{
+            color: #53ccf4;
+        }
+        .blueBg{
+            background-color: black;
+        }
+
+        /* Group Selector */
+        span , footer{
+            color:rgb(205, 229, 66);
+            background-color: #53ccf4;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h2&gt;CSS Selectors&lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;p id="firstPara" class="redElement blueBg"&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, cupiditate?&lt;/p&gt;
+    &lt;p id="secondPara"&gt;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, cupiditate?&lt;/p&gt;
+    &lt;div class="container"&gt;
+        &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos, voluptates!&lt;/p&gt;
+        &lt;span&gt;this is a span tag&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;footer&gt;This is a footer&lt;/footer&gt;
+    
+    &lt;/body&gt;
+&lt;/html&gt;

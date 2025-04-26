@@ -1,0 +1,53 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Positioning Property&lt;/title&gt;
+    &lt;style&gt;
+        .container{
+            border: 2px solid black;
+            background-color: khaki;
+            height:3444px;
+        }
+        .box{
+            display: inline-block;
+            border: 2px solid red;
+            height: 150px;
+            width: 150px;
+            margin: 2px;
+            
+        }
+        #box3{
+            /* positions in CSS: static(default), relative, absolute, fixed, sticky*/
+
+            /* relative position apply the changes relative to it's original position and leave a gap at it's original position*/
+            position: relative;
+            top: 20px;
+            left: 30px;
+
+            /* absolute position apply the changes with respect to parent block and it dooesnot leave a gap */
+            /* position: absolute;
+            top:34px;
+            left:34px; */
+
+            /* fixed position keeps the block in a fixed position even when scrolling and it doesnot leave a gap*/
+            /* position: fixed;
+            right: 30px;
+            bottom: 30px; */
+
+            /* sticky position keeps the block stuck at the same position and it leaves a gap at it's original position*/
+            /* position: sticky;
+            top: 50px; */
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="box" id="box1"&gt;1&lt;/div&gt;
+        &lt;div class="box" id="box2"&gt;2&lt;/div&gt;
+        &lt;div class="box" id="box3"&gt;3&lt;/div&gt;
+        &lt;div class="box" id="box4"&gt;4&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;

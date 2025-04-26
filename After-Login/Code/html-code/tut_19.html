@@ -1,0 +1,47 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;More about selectors&lt;/title&gt;
+&lt;/head&gt;
+&lt;style&gt;
+    h1{
+        background-color: rgb(123, 216, 123);
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    /* Following selector selects all the p tags which are inside the div , directly or indirectly */
+    /* div p{
+        background-color: rgb(209, 126, 126);
+        font-weight: bold;
+    } */
+
+    /* Following selector selects all the p tags which are directly inside the  div tag */
+    /* div &gt; p{
+        background-color: rgb(209, 126, 126);
+        font-weight: bold;
+    } */
+
+    /* Following selector selects all the p tags which are right after div tag */
+    div + p{
+        background-color: rgb(209, 126, 126);
+        font-weight: bold;
+    }
+
+&lt;/style&gt;
+&lt;body&gt;
+    &lt;h1&gt;This is more about selectors&lt;/h1&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;p&gt;1.Lorem ipsum dolor sit amet consectetur.&lt;/p&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;p&gt;2.Lorem ipsum dolor sit amet consectetur.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;3.Lorem ipsum dolor sit amet consectetur.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;4.Lorem ipsum dolor sit amet consectetur.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;

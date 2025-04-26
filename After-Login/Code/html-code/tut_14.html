@@ -1,0 +1,41 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;z-index&lt;/title&gt;
+&lt;/head&gt;
+&lt;style&gt;
+    .box{
+        width: 170px;
+        height: 170px;
+        border: 2px solid black;
+    }
+    #box1{
+        background-color: green;
+        position: relative;
+        top: 40px;
+        z-index: 21;
+    }
+    #box2{
+        background-color: red;
+        position: relative;
+        top: 14px;
+        /* z-index is only works when position is not static */
+        /* The div which has larger z-index , will overlap other */
+        z-index: 22;
+        /* visibility: hidden hides the element but it leaves there a empty space */
+        /* visibility: hidden; */
+        /* display:none hides the element and also remove the empty space of the element */
+        /* display: none; */
+    }
+    #box3{background-color: blue;}
+    #box4{background-color: yellow;}
+&lt;/style&gt;
+&lt;body&gt;
+    &lt;div class="box" id="box1"&gt;&lt;/div&gt;
+    &lt;div class="box" id="box2"&gt;&lt;/div&gt;
+    &lt;div class="box" id="box3"&gt;&lt;/div&gt;
+    &lt;div class="box" id="box4"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;

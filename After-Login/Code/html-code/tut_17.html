@@ -1,0 +1,45 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Size Units&lt;/title&gt;
+    &lt;style&gt;
+
+        html{
+            font-size: 25px;
+            margin: 0px;
+        }
+        body{
+            margin: 0px;
+        }
+        .container{
+            font-size: 20px;
+            border: 2px solid red;
+            height: 100vh; /*viewport height*/
+            width: 100vw; /*viewport width*/
+            padding: 20px;
+            
+        }
+        h1{
+            text-align: center;
+        }
+        #first{
+            /* em is used to change the properties of a item with respect to parent element */
+            font-size: 3em;
+            padding: 3em;
+        }
+        #third{
+             /* rem is used to change the properties of a item with respect to html element */
+             /* font-size: 3rem; */
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 id="first"&gt;This is first headind&lt;/h1&gt;
+        &lt;h1 id="second"&gt;This is second headind&lt;/h1&gt;
+        &lt;h1 id="third"&gt;This is third headind&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;

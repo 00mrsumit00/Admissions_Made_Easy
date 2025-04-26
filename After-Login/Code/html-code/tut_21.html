@@ -1,0 +1,86 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Before and after pseudo selector&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;style&gt;
+    body {
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+        color: white;
+        
+    }
+    header::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: url(unsplash.jpg);
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+        opacity: 0.8;
+        
+    }
+    .navigation {
+       
+        margin-top: 0px;
+        display: flex;
+        background-color: white;
+        color: black;
+        height: 55px;
+        
+    }
+
+    li {
+        padding:11px 23px;
+        list-style: none;
+        font-family: 'Oswald', sans-serif;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    li:hover{
+        background-color: rgb(197, 192, 192);
+        border-radius: 15px;
+    }
+
+    h3{
+        font-size: 4rem;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 300px;
+        justify-content: center;
+    }
+&lt;/style&gt;
+
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav&gt;
+            &lt;ul class="navigation"&gt;
+                &lt;li class="item"&gt;Home&lt;/li&gt;
+                &lt;li class="item"&gt;About Us&lt;/li&gt;
+                &lt;li class="item"&gt;Contact Us&lt;/li&gt;
+                &lt;li class="item"&gt;Services&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;section&gt;
+        &lt;h3&gt;Welcome to coding world&lt;/h3&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, veritatis.&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;

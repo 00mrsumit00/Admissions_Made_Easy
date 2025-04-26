@@ -1,0 +1,87 @@
+&gt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Attribute and nth child Pseudo selectors&lt;/title&gt;
+&lt;/head&gt;
+&lt;style&gt;
+    .container{
+        display: block;
+        width: 300px;
+        margin: auto;
+    }
+    
+    /* We can apply the css to only that element whose type is text or the tag which have the particular attribute like target*/
+    input[type]{
+        background-color: yellow;
+        border: 3px solid red;
+        padding: 20px;
+    }
+    input[type='text']{
+        background-color: yellow;
+        border: 3px solid rgb(217, 100, 190);
+        padding: 30px;
+    }
+    a[target]{
+        font-size: 34px;
+        color: aqua;
+    }
+    a[target="_self"]{
+        font-size: 44px;
+        color: rgb(39, 140, 46);
+    }
+
+    /* Following property apply the css only to the third child of the li tag  */
+    /* li:nth-child(3){
+        color: cyan;
+    } */
+
+    /* Following property apply the css to the every second child of the li tag  */
+    /* li:nth-child(2n+0){
+        color: red;
+    } */
+
+    /* li:nth-child(3n+3){
+        color:green;
+    } */
+
+    /* Only Odd children of li tag  */
+    /* li:nth-child(odd){
+        background-color: yellow;
+    } */
+
+    /* Only Even children of li tag  */
+    li:nth-child(even){
+        background-color: yellow;
+    }
+
+    input:nth-child(1){
+        color: yellow;
+    }
+&lt;/style&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;&lt;a href="http://google.com" target="_blank"&gt;Go to google&lt;/a&gt;&lt;/h1&gt;
+        &lt;h1&gt;&lt;a href="http://facebook.com" target="_self"&gt;Go to facebook&lt;/a&gt;&lt;/h1&gt;
+        &lt;form action="" class="form-control"&gt;
+            &lt;input type="text" placeholder="Enter your name"&gt;
+            &lt;input type="password" placeholder="Enter your password"&gt;
+        &lt;/form&gt;
+
+        &lt;ul&gt;
+            &lt;li class="list" id="item1"&gt;item1&lt;/li&gt;
+            &lt;li class="list" id="item2"&gt;item2&lt;/li&gt;
+            &lt;li class="list" id="item3"&gt;item3&lt;/li&gt;
+            &lt;li class="list" id="item4"&gt;item4&lt;/li&gt;
+            &lt;li class="list" id="item5"&gt;item5&lt;/li&gt;
+            &lt;li class="list" id="item6"&gt;item6&lt;/li&gt;
+            &lt;li class="list" id="item7"&gt;item7&lt;/li&gt;
+            &lt;li class="list" id="item8"&gt;item8&lt;/li&gt;
+            &lt;li class="list" id="item9"&gt;item9&lt;/li&gt;
+            &lt;li class="list" id="item10"&gt;item10&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;

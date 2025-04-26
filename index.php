@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions Made Easy - Medical & Engineering Consultancy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <?php session_start(); ?>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #3b82f6;
+            --light: #f0f9ff;
+            --dark: #1e293b;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+    </style>
+    <link rel="stylesheet" href="partials/CSS/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Admissions Made Easy Logo" />
+                <div class="logo-text">
+                    <h1>Admissions Made Easy</h1>
+                    <p>Simplify Career Decision</p>
+                </div>
+            </div>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="#services"><i class="fas fa-cogs"></i> Services</a></li>
+                    <li><a href="#branches"><i class="fas fa-building"></i> Branches</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <?php 
+                        if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
+                            echo '<li><a href="Before-Login/Login_&_Register/login.php"><i class="fas fa-sign-in-alt"></i> Login</a></li>';
+                        } else {
+                            echo '<li><a href="After-Login/Home/dashboard-index.php"><i class="fas fa-sign-in-alt"></i> Dashboard</a></li>';
+                        }
+                    ?>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Marquee Updates Section -->
+    <div class="update-marquee-container">
+        <div class="update-date">
+            06-03-2025
+        </div>
+        <marquee class="update-marquee" behavior="scroll" direction="left" scrollamount="5">
+            डेटासेटमध्ये भारत (महाराष्ट्र) प्रदेशात बोलल्या जाणाऱ्या भाषांपैकी एक असलेल्या मराठी भाषेतील हस्तलिखित मजकुराच्या प्रतिमा आहेत. काही स्थानिक भाषिक लेखकांना त्यांच्या हस्ताक्षरात पूर्व-लिखित मजकूर लिहिण्यासाठी आमंत्रित करण्यात आले होते. पूर्व-लिखित मजकूर अशा प्रकारे काळजीपूर्वक लिहिला आहे की त्यात मराठी लिपीतील मजकूर लिहिण्यासाठी वापरलेले जवळजवळ सर्व वर्ण, शब्द आणि ठिपके समाविष्ट आहेत.
+        </marquee>
+    </div>
+
+    <!-- Swiper Slider Section -->
+    <section class="slider-section">
+        <div class="section-title">
+            <h2>Our Success Stories</h2>
+            <p>See how we've helped students achieve their dreams</p>
+        </div>
+
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <!-- Swiper -->
+        <div class="swiper slider-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/01.jpg" alt="Success Story 1" />
+                    <div class="slider-caption">
+                        <h3>Medical College Admissions</h3>
+                        <p>Helping students secure seats in top medical colleges</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/02.jpg" alt="Success Story 2" />
+                    <div class="slider-caption">
+                        <h3>Engineering College Guidance</h3>
+                        <p>Expert counseling for engineering aspirants</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/03.jpg" alt="Success Story 3" />
+                    <div class="slider-caption">
+                        <h3>Document Preparation Support</h3>
+                        <p>Ensuring all documentation is perfect for your application</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/04.jpg" alt="Success Story 4" />
+                    <div class="slider-caption">
+                        <h3>College Selection Process</h3>
+                        <p>Finding the perfect college match for your scores and preferences</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/05.jpg" alt="Success Story 5" />
+                    <div class="slider-caption">
+                        <h3>Career Counseling Sessions</h3>
+                        <p>One-on-one guidance for making the right career choice</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var swiper = new Swiper(".swiper", {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            });
+        </script>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-title">
+            <h2>About Us</h2>
+            <p>Admissions Made Easy is a premier consultancy service founded by Mr. Sachin Bangad. With three strategic locations across Maharashtra, we aim to guide students through the complex admission processes of medical and engineering programs.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>We provide comprehensive consultancy services to help students achieve their career goals</p>
+        </div>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <h3>Regular Updates</h3>
+                <p>Stay informed with the latest admission notifications and important deadlines</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <h3>Online Process</h3>
+                <p>Complete your application process online with our guided assistance</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <h3>College Information</h3>
+                <p>Comprehensive details about top medical and engineering colleges</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <h3>Preference Selection</h3>
+                <p>Expert guidance on selecting colleges based on your score and preferences</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3>Documents Preparation</h3>
+                <p>Assistance in preparing and organizing all required documents</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches Section -->
+    <section id="branches" class="branches">
+        <div class="section-title">
+            <h2>Our Branches</h2>
+            <p>Visit any of our three convenient locations across Maharashtra</p>
+        </div>
+        <div class="branches-container">
+            <div class="branch-card">
+                <h3>LATUR</h3>
+                <div class="branch-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Shivaji Nagar, Latur 413512</span>
+                </div>
+                <div class="branch-info">
+                    <i class="fas fa-phone"></i>
+                    <span>9970809003</span>
+                </div>
+                <div class="branch-info">
+                    <i class="fas fa-phone"></i>
+                    <span>9309553235</span>
+                </div>
+            </div>
+            <div class="branch-card">
+                <h3>PUNE</h3>
+                <div class="branch-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Bhosari, Pune 411111</span>
+                </div>
+                <div class="branch-info">
+                    <i class="fas fa-phone"></i>
+                    <span>8888885556</span>
+                </div>
+            </div>
+            <div class="branch-card">
+                <h3>KOLHAPUR</h3>
+                <div class="branch-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Homoi, Kolhapur 565685</span>
+                </div>
+                <div class="branch-info">
+                    <i class="fas fa-phone"></i>
+                    <span>7263958587</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>Get in touch with our expert counselors for personalized guidance</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Reach Out to Us</h3>
+                <p>Have questions about admissions? Our team is here to help you navigate through the process.</p>
+                <div class="branch-info">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@admissionsmadeeasy.com</span>
+                </div>
+                <div class="branch-info">
+                    <i class="fas fa-phone"></i>
+                    <span>9970809003</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <div class="footer-logo">
+                    <h3>Admissions Made Easy</h3>
+                    <p>Simplify Career Decision</p>
+                </div>
+                <p>Your trusted partner for medical and engineering admissions guidance across Maharashtra.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#branches">Branches</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#login">Login</a></li>
+                    
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Regular Updates</a></li>
+                    <li><a href="#services">Online Process</a></li>
+                    <li><a href="#services">College Information</a></li>
+                    <li><a href="#services">Preference Selection</a></li>
+                    <li><a href="#services">Documents Preparation</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Branches</h4>
+                <ul>
+                    <li><a href="#branches">Latur</a></li>
+                    <li><a href="#branches">Pune</a></li>
+                    <li><a href="#branches">Kolhapur</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Admissions Made Easy. All Rights Reserved. | Designed & Developed by Sachin Bangad</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('D')

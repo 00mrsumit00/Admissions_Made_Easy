@@ -1,0 +1,69 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Navigation Bar&lt;/title&gt;
+    &lt;style&gt;
+        .navbar{
+            background-color: black;   
+            height: 40px;
+            border-radius: 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .navbar ul{
+            overflow: auto;
+            
+        }
+        .navbar li{
+            margin-top: 10px;
+            float: left;
+            list-style: none; 
+        }
+        .navbar li a{
+            padding: 0px 20px;
+            margin: 5px;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
+        .search{
+            color: white;
+            text-align: right;
+            margin-top: 11px;
+            margin-right: 50px;
+
+            
+        }
+        .search input{
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        .navbar:hover{
+            background-color: rgb(127, 124, 120);
+            
+        }
+        .navbar li a:hover{
+            color: black;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav class="navbar"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Contact us&lt;/a&gt;&lt;/li&gt;
+            &lt;div class="search"&gt;
+                &lt;input type="text" placeholder="Search here" size="15"&gt;&lt;span&gt;Search&lt;/span&gt;&lt;/div&gt;
+        &lt;/ul&gt;
+        
+            
+
+       
+        &lt;/nav&gt;
+    &lt;/header&gt;
+&lt;/body&gt;
+&lt;/html&gt;

@@ -1,0 +1,55 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Event Bubbling&lt;/title&gt;
+    &lt;style&gt;
+        .container{
+            background-color: rgb(83, 159, 225);
+            padding: 34px;
+            margin: 14px;
+            border: 2px solid black;
+        }
+        .childContainer{
+            background-color: yellow;
+            padding: 14px;
+            margin: 14px;
+            border: 2px solid black;
+        }
+        .child{
+            background-color: beige;
+            padding: 14px;
+            margin: 14px;
+            border: 2px solid black;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;I am Container
+        &lt;div class="childContainer"&gt;I am Child Container
+            &lt;div class="child"&gt;
+                I am Child
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        // Event Bubbling
+        // Here e is the object of event
+        document.querySelector(".child").addEventListener("click",(e)=&gt;{        // When we click on child, we tecnically also click on container and childContainer because they are parents of child. To avoid this we use stopPropagation function on the event
+            e.stopPropagation() 
+            alert("Child was clicked")
+        })
+
+        document.querySelector(".childContainer").addEventListener("click",(e)=&gt;{
+            e.stopPropagation() 
+            alert("Child container was clicked")
+        })
+
+        document.querySelector(".container").addEventListener("click",(e)=&gt;{
+            e.stopPropagation() 
+            alert("Container was clicked")
+        })
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;

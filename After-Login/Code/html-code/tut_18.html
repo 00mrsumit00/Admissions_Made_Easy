@@ -1,0 +1,56 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Media Queries&lt;/title&gt;
+    &lt;style&gt;
+        .box{
+            text-align: center;
+            font-size: 28px;
+            background-color: black;
+            color: white;
+            display: none;
+        }
+
+        @media only screen and (max-width:200px){
+            
+            #box1{
+                background-color: red;
+                color:white;
+                display: block;
+            }
+        }
+        @media only screen and (min-width:200px) and (max-width:500px){
+            
+            #box2{
+                background-color: yellow;
+                color:black;
+                display: block;
+            }
+        }
+        @media only screen and (min-width:500px) and (max-width:800px){
+            
+            #box3{
+                background-color: green;
+                color:white;
+                display: block;
+            }
+        }
+        @media only screen and (min-width:800px){
+            
+            #box4{
+                background-color: red;
+                color:white;
+                display: block;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="box" id="box1"&gt;Mai ek iPhone hoon&lt;/div&gt;
+    &lt;div class="box" id="box2"&gt;Mai ek Tablet hoon&lt;/div&gt;
+    &lt;div class="box" id="box3"&gt;Mai ek Computer hoon&lt;/div&gt;
+    &lt;div class="box" id="box4"&gt;Mai ek Widescreen Computer hoon &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
