@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +8,34 @@
     <link rel="stylesheet" href="style.css"> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="top-header">
+        <div class="top-container">
+            <div class="top-sub-container">
+                <h1><i class="fas fa-user-edit me-2"></i> Registration</h1>
+                <nav class="d-none d-md-block">
+                    <ul class="list-unstyled d-flex m-0">
+                        <li class="me-3"><a href="../Home/dashboard-index.php" class="text-white text-decoration-none"><i class="fas fa-home me-1"></i> Home</a></li>
+                        <button class="theme-toggle" id="themeToggle">
+                            <span id="themeIcon">☀️</span> Light Mode
+                        </button>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
     <div class="container">
         <div class="form-container">
             <div class="header">
-                <h1>Student Registration Form</h1>
-                <button class="theme-toggle" id="themeToggle">
-                    <span id="themeIcon">☀️</span> Light Mode
-                </button>
+                <h1>New Registration Form</h1>
+                <a href="edit-form.php" class="btn btn-outline-secondary">
+                    <i class="fas fa-search me-1"></i> Search Registration
+                </a>
             </div>
 
             <div class="progress-container">
@@ -491,11 +511,11 @@
                         </label>
                         <select class="form-control" id="familyIncome" name="familyIncome" required>
                             <option value="">Select income range</option>
-                            <option value="below_25k">Below $25,000</option>
-                            <option value="25k_50k">$25,000 - $50,000</option>
-                            <option value="50k_75k">$50,000 - $75,000</option>
-                            <option value="75k_100k">$75,000 - $100,000</option>
-                            <option value="above_100k">Above $100,000</option>
+                            <option value="below 1,00,000">Below 1,00,000</option>
+                            <option value="1,00,001 to 5,00,000">1,00,001 to 5,00,000</option>
+                            <option value="5,00,001 to 8,00,000">5,00,001 to 8,00,000</option>
+                            <option value="8,00,001 to 10,00,000">8,00,001 to 10,00,000</option>
+                            <option value="above 10,00,001">Above 10,00,001</option>
                         </select>
                         <div class="error-message">Please select income range</div>
                     </div>
@@ -546,13 +566,14 @@
                             <option value="sc">Scheduled Caste (SC)</option>
                             <option value="st">Scheduled Tribe (ST)</option>
                             <option value="obc">Other Backward Class (OBC)</option>
+                            <option value="ews">Economically Weaker Section (EWS)</option>
                             <option value="other">Other</option>
                         </select>
                         <div class="error-message">Please select caste category</div>
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Do you qualify for any reservation? 
+                        <label class="form-label">Do you belongs to any special reservation?
                             <span class="tooltip">ⓘ
                                 <span class="tooltip-text">Select if you qualify for any special reservation categories</span>
                             </span>
@@ -1268,6 +1289,11 @@
                 return false;
             }
 
+            // Generate serial number if not already present
+            if (!serialNumber) {
+                serialNumber = generateSerialNumber();
+            }
+
              // Validate serial number
             if (!validateSerialNumber()) {
                 alert('Error: Could not get a valid serial number. Please refresh the page and try again.');
@@ -1314,6 +1340,7 @@
 
             // Add a delay of 1 minute before submitting
             setTimeout(() => {
+                
             // Get form data
             const formData = new FormData(form);
 

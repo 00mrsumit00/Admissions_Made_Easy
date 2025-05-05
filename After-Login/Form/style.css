@@ -10,6 +10,7 @@
     --background-dark: #212529;
     --card: #ffffff;
     --card-dark: #343a40;
+    --primary-color: #4a6baf;
 }
 
 * {
@@ -23,8 +24,8 @@ body {
     background-color: var(--background);
     color: var(--text);
     transition: background-color 0.3s, color 0.3s;
-    min-height: 100vh;
-    padding: 2rem 1rem;
+    height: auto;
+    /* padding: 2rem 1rem; */
 }
 
 body.dark-mode {
@@ -32,9 +33,53 @@ body.dark-mode {
     color: #f8f9fa;
 }
 
+.top-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.top-header h1 {
+    margin: 0;
+    font-weight: 700;
+}
+
+.top-container{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.top-sub-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.list-unstyled{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.d-flex {
+    display: flex !important;
+    align-items: center !important;
+}
+
+
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px !important;
+    margin: 2rem auto;
 }
 
 .form-container {

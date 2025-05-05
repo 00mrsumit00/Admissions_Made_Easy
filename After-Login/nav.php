@@ -272,12 +272,12 @@
         }
 
          /* Header Styles */
-         .header {
+         .nav-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
-            background-color: white;
+            background-color: white !important;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
@@ -494,7 +494,7 @@
 
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="nav-header">
         <div class="logo">
             <!-- <img src="../images/logo.png" alt="Admissions Made Easy Logo" onerror="this.src='../images/default-logo.png'; this.onerror='';" /> -->
             <h2>Admissions Made Easy</h2>
@@ -502,8 +502,8 @@
         
         <nav class="nav-links">
             <a href="../Home/dashboard-index.php" class="active">Home</a>
-            <a href="../Form/form-index.php">Notes</a>
-            <a href="#">Counseling</a>
+            <a href="../Form/edit-form.php">Registration</a>
+            <a href="../Form/view-users.php">Counseling</a>
             <a href="../Payment/pay-index.php">Payment</a>
         </nav>
         

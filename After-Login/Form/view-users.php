@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+require 'vendor/autoload.php'; include('../nav.php');
 
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
@@ -160,6 +160,7 @@ $paginatedUsers = array_slice($users, $offset, $itemsPerPage);
         body {
             background-color: #f8f9fa;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: auto;
         }
         .header {
             background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);

@@ -1,6 +1,11 @@
 <?php
 require 'vendor/autoload.php'; // Include PHPSpreadsheet
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
@@ -12,7 +17,7 @@ function sanitizeInput($data) {
     return $data;
 }
 
-$fileName = "DB/student_registrations.xlsx"; // Excel file name
+$fileName = "DB/student_registrations.xlsx"; // Excel file name student_registrations.xlsx
 
 // Check if file exists, if not create a new one
 if (file_exists($fileName)) {

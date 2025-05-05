@@ -268,13 +268,6 @@ prevButtons.forEach(button => {
     });
 });
 
-// Add event listeners for form submission and review
-form.addEventListener('submit', handleSubmit);
-if (closeReviewBtn) {
-    closeReviewBtn.addEventListener('click', () => {
-        reviewModal.classList.remove('active');
-    });
-}
 
 confirmSubmitBtn.addEventListener('click', () => {
     const previewBody = document.querySelector('.preview-body');
